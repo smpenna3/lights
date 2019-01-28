@@ -47,6 +47,7 @@ def setTransitionAll(value):
 
 def fadeSingleLoop(fullLoopTime, stepSize):
 	delay = (fullLoopTime / (65000 / stepSize))
+	print(delay)
 	for i in range(0, 65000, stepSize):
 		setHueAll(i)
 		time.sleep(delay)
