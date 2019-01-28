@@ -1,5 +1,5 @@
 var socket = io.connect(location.origin + '/channel');
 
-function send(){
+function fade(){
     socket.emit('fade')
 }

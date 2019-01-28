@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from flask.socketio import SocketIO
+from flask_socketio import SocketIO
 import fade
 
 # Setup flask app
@@ -15,4 +15,4 @@ def fade_routine():
 	fade.fadeSingleLoop(10, 1000)
 
 if __name__ == '__main__':
-	socketio.run(host='0.0.0.0', port='6600', debug=True, use_reloader=False)
+	socketio.run(app, host='0.0.0.0', port='6600', debug=True, use_reloader=False)
